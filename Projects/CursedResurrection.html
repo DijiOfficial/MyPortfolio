@@ -49,52 +49,35 @@
 							<hr />
 							<h2>About Cursed Resurrection</h2>
 							<div class="box">
-								<p><span class="image left"><img src="../images/ConstrictionDemo.gif" alt="" /></span>Cursed Resurrection is my first Unity project, a First-Person Roguelike. </p>
+								<p><span class="image left"><img src="../images/EndlessCryptDemo.png" alt="" /></span>Cursed Resurrection is my first Unity project, a First-Person Roguelike. Based on the words: “Endless” and “Grave”, I designed a high-tempo action, first-person roguelike where players are locked in a battle for life against constant decay.<br>The player's health is constantly drained. The only way to survive is to keep fighting, absorbing life from fallen enemies in an effort to stay alive long enough to kill the grave king ... or join him.<br>
+									Despite time and scope constraints, I am happy with the result, a fully playable prototype showcasing core mechanics, and a general style/theme of the game.</p>
 							</div>
 							<hr />
-							
-							<header>
-								<h2>Skills and Tools</h2>
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<ul>
-											<li>Unity</li>
-											<li>C++ & C#</li>
-											<li>Win32 App</li>
-											<li>Procedural Generation</li>
-											<li>Algorithmic Optimisations</li>
-											<li>2D and 3D design</li>
-										</ul>
-									</div>
-								</div>
-
-								<h2 id="WorkSection">My Implementation</h2>
-								<div class="col-6 col-12-small">
-									<p>I made a 2D Tile-Based WFC to generate maps based on a set of tiles and defined weights, I also created a small game showcasing a potential use of the generation. With defined path the rest of the world is randomly generated!</p>
-									<p>I also made a 3D version as a proof of concept, adapting the algorithm for 3D structures to generate dungeons.</p>
-									
-									<p>I invite you to check out my Github page where I go into details about my implementation with visual demonstrations as well.</p>
-									<a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/WaveFunctionCollapse" class="button primary fit icon solid fa-search">Read More</a></li>
-
-								</div>
-							</header>
-
-							<hr/>
-
 							<h2>Video Demo</h2>
 								<div class="wrapper-video">
 									<video controls>
-										<source src="../images/UnityWFC.mp4" type="video/mp4">
+										<source src="../images/EndlessCrypt.mp4" type="video/mp4">
 										Your browser does not support the video tag.
 									</video>
 								</div>
-								<div class="wrapper-video">
-									<img src="../images/WFCDemo.gif" alt="" />
+							<hr />
+							<header>
+								<h2 id="WorkSection">My Implementation</h2>
+								<div class="col-6 col-12-small">
+									<p>The central mechanic in Cursed Resurrection is a life-drain system. From the moment the player enters a run, their life begins to deplete at a constant rate. There's no passive regen, the only way to survive is to kill.<br>
 
+Combat was designed to feel satisfying and urgent. Killing enemies drops health orb, while chaining together kills rapidly activates a combo system that increases healing rate rewarding players for dashing into fights rather than taking it slow. At max combo, the player can perform a "glory kill" a cinematic finisher inspired from DOOM that fully restores their health and briefly halts the life-drain, providing a powerful and rewarding moment in the flow of battle. <br>
+The game gets progressively harder, from harder/stronger enemies to new enemies and faster life drain.<br>
+
+The game also features a hub area, referred to as the Safe Heaven. Which includes what you'd expect from a roguelike hub. The upgrade system is split into two tracks: temporary upgrades, found or bought during a run, and permanent upgrades, purchased using “Soul Fragments” collected over multiple runs. A common feature in roguelikes providing this "getting stronger" feel.<br>
+
+While procedural generation was conceptually planned, it was ultimately restricted due to course constraints. As a result, the room layout is fixed but would grately benefit from precedural generation. (Check out my Wave Function Collapse if you haven't already!)</p>
+									<p>As this game was initially made to learn the Unity Engine the biggest problem I faced was Time Constraints, trying to fit what I needed in the given time was quite a challenge and even though I had to cut a lot from the original idea I'm happy with the prototype it turned out to be. I really enjoyed working on this project and wrote at the time an extensive README which I encourage you to check out below!</p>
 								</div>
+							</header>
 							<ul class="actions fit">
-								<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/WaveFunctionCollapse" class="button primary fit icon solid fa-search">Read More</a></li>
-								<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/WaveFunctionCollapse/releases" class="button fit icon solid fa-download">Download</a></li>
+								<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/CursedResurrection" class="button primary fit icon solid fa-search">Read More</a></li>
+								<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/CursedResurrection/releases" class="button fit icon solid fa-download">Download</a></li>
 							</ul>
 							<hr />
 							
