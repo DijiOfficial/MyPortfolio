@@ -49,10 +49,10 @@
 							<hr />
 							<h2>About Wave Function Collapse (WFC)</h2>
 							<div class="box">
-								<p><span class="image left"><img src="../images/ConstrictionDemo.gif" alt="" /></span>Here's a quick explanation on what the WFC is, if you already know about it feel free to skip to <a href="#WorkSection">my implementation.</a><br>The WFC is an algorithm for procedural generation using building blocks called tiles or modules in 3D. Defining a set of rules for each Tile/Module to control the connections. The algorithm then picks the spot with the fewest possible choices (lowest entropy), makes a decision which can be influenced with weights, and then ripples out the consequences to the surrounding area, ruling out impossible combinations as it goes and repeating until finished.</p>
+								<p><span class="image left"><img src="../images/ConstrictionDemo.gif" alt="" /></span>Here's a quick explanation on what the WFC is, if you already know about it feel free to skip to <a href="#DemoSection">my demo.</a><br>The WFC is an algorithm for procedural generation using building blocks called tiles or modules in 3D. Defining a set of rules for each Tile/Module to control the connections. The algorithm then picks the spot with the fewest possible choices (lowest entropy), makes a decision which can be influenced with weights, and then ripples out the consequences to the surrounding area, ruling out impossible combinations as it goes and repeating until finished.</p>
 							</div>
 							<hr />
-								<h2>Video Demo</h2>
+								<h2 id="DemoSection">Video Demo</h2>
 								<div class="wrapper-video">
 									<video controls>
 										<source src="../images/UnityWFC.mp4" type="video/mp4">
@@ -79,7 +79,7 @@
 									</div>
 								</div>
 
-								<h2 id="WorkSection">My Implementation</h2>
+								<h2>My Implementation</h2>
 								<div class="col-6 col-12-small">
 									<p>I made a 2D Tile-Based WFC to generate maps based on a set of tiles and defined weights, I also created a small game showcasing a potential use of the generation. With defined path the rest of the world is randomly generated!</p>
 									<p>I also made a 3D version as a proof of concept, adapting the algorithm for 3D structures to generate dungeons.<br>Inspired by a <a rel="noopener noreferrer" target="_blank"href="https://www.youtube.com/watch?v=2SuvO4Gi7uY">video by Martin Donald</a> that illustrated the algorithm and its endless procedural possibilities. I wanted to explore how generative algorithms intersect with games, having worked with generative algortihms before, this was a natural progression for me.<br>I'm fascinated by the potential of dungeon generation and truly believe that the future of gaming lies in procedural generation. Imagine your favorite single-player game with a new map generated every time you replay it!</p>
