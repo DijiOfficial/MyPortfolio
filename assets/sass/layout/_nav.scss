@@ -18,9 +18,9 @@
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
-		overflow: hidden;
+		// overflow: hidden;
 		padding: 0 2rem 0 0;
-		position: relative;
+		position: sticky;
 		width: calc(100% - #{_size(padding) * 2});
 		max-width: _size(wrapper);
 		z-index: 2;

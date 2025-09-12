@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Burgisser Dylan - Custom SFML Engine</title>
+		<title>Burgisser Dylan - SFML Engine</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/mainFooter.css">
@@ -30,7 +30,7 @@
 							<li><a href="../aboutme.html">About Me</a></li>
 							<li><a href="../Projects.html">All Projects</a></li>
 							
-							<li class="active"><a rel="noopener noreferrer" target="_self" href="SFML.html">Custom SFML Engine</a></li>
+							<li class="active"><a rel="noopener noreferrer" target="_self" href="SFML.html">SFML Engine</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/dylanburgisser/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -44,51 +44,75 @@
 						<!-- Post -->
 						<section class="post">
 							<header class="major">
-								<h1>Custom SFML Engine</h1>
+								<h1>SFML Engine</h1>
 							</header>
-
-							<!-- Text stuff -->
 							<hr />
-							<h2>Video Demo</h2>
-								<div class="wrapper-video">
-									<video controls>
-										<source src="../images/test.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-								</div>
-							<hr />
+							<h2>About the SFML Engine</h2>
+							<div class="box">
+								<p>My <strong>SFML Engine</strong> is a lightweight C++ engine built with <strong>SFML (Simple and Fast Multimedia Library)</strong>, implemented following the <strong>C++ Core Guidelines.</strong><br>
+This Engine is built on the foundation of my <strong>Diji-Engine</strong>, using <strong>SFML</strong> over <strong>SDL</strong>. The goal is to deepen my understanding of programming, software architecture, game engine design and to improve development practices by exploring a new multimedia library. This engine is tailored for my use case, focusing on a more streamlined yet expandable system architecture with a cleaner pipeline and more robust internal systems than its predecessor.</p>
+                    
+                    			<p>Inspired by popular engines like <strong>Unity</strong> and <strong>Unreal Engine</strong>, this project incorporates <strong>event-driven programming</strong> and a modular component architecture designed for rapid iteration and clean code practices.</p>
+                    
+                    			<p>Built following the <strong>C++ Core Guidelines</strong>, the engine features a flexible component system amongst other systems that demonstrate my knowledge of modern C++ development and game development patterns.</p>
+							</div>
+							<hr/>
 							<header>
-								<h2>Skills Acquired</h2>
+
+								<h2>Skills and Tools</h2>
 								<div class="row">
 									<div class="col-6 col-12-small">
 										<ul>
-											<li>balls.</li>
-											<li>more balls</li>
-											<li>Felis feugiat dolore viverra.</li>
-											<li>Dolor pulvinar etiam.</li>
+											<li><strong>C++ 20</strong></li>
+											<li><strong>SFML 3.0</strong></li>
+											<li><strong>Custom Engine Architecture</strong></li>
+											<li><strong>Event-Driven Programming</strong></li>
+											<li><strong>Component System Design</strong></li>
+											<li><strong>Template Metaprogramming</strong></li>
 										</ul>
 									</div>
 									<div class="col-6 col-12-small">
 										<ul>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Sagittis lorem eleifend.</li>
-											<li>Felis feugiat dolore viverra.</li>
-											<li>Dolor pulvinar etiam.</li>
+											<li><strong>Performance Optimization</strong></li>
+											<li><strong>Resource Management</strong></li>
+											<li><strong>Input System Design</strong></li>
+											<li><strong>Scene Management</strong></li>
+											<li><strong>Game Loop Architecture</strong></li>
+											<li><strong>Programming Patterns</strong></li>
 										</ul>
 									</div>
-							</header>
-							<hr />
+								</div>
 
-							<!-- Box -->
-							<h2>About Brawlstorm</h2>
-							<div class="box">
-								<p><span class="image left"><img src="../images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
-							</div>
+								<section>
+									<h2>My Implementation</h2>
+									<div class="col-6 col-12-small">
+
+										<p>What I will present here is a fraction of what this project is about. I wrote an extensive README on the <a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/SFML-Engine" >GitHub Page</a> of this project which I encourage you to look at.</p>
+										<p><span class="image left"><img src="../images/PipelineSFML.png" alt="" /></span>
+										<h3>Newer Core Systems</h3>
+										<ul>
+											<li><strong>Event System:</strong> Implemented a complete event-driven architecture inspired by Unreal Engine, allowing components to create, broadcast, and subscribe to events with template support for data passing</li>
+											<li><strong>Advanced Input Manager:</strong> Built a sophisticated input system supporting HELD, PRESSED, and RELEASED states with O(1) command lookup using hash maps and template-based mouse/keyboard handling</li>
+											<li><strong>Timer System:</strong> Created flexible timers to call functions or lambdas on a delay.</li>
+											<li><strong>Scene Management:</strong> Advanced manager for scenes allowing automatic scene management with extra features like GameObject Spawning or GameObject finder.</li>
+											<li><strong>Pipeline Optimization:</strong> Enhanced the engine pipeline with "Start", "OnDestroy", and "OnEnable" & "OnDisable" lifecycle methods for component management</li>
+										</ul>
+
+										<p>While I used advanced C++ techniques including template metaprogramming, the engine served as both a learning tool and a showcase of my understanding of game engine architecture and game programming.</p>
+										</p>
+
+										<br><p>This project solidified my understanding of engine development, game programming and advanced C++ programming. If what you read so far peaked your interest I invite you to read the GitHub page of the project.</p>
+
+									</div>
+								</section>
+
+							</header>
 
 							<ul class="actions fit">
-								<li><a href="#" class="button primary fit icon solid fa-search">Read More</a></li>
-								<li><a href="#" class="button fit icon solid fa-download">Download</a></li>
+								<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/SFML-Engine" class="button primary fit icon solid fa-search">Read More</a></li>
 							</ul>
+							<hr />
+							
 						</section>
 					</div>
 

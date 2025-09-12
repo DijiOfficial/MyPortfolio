@@ -3224,7 +3224,7 @@ input, select, textarea {
 		transition: opacity 0.5s ease;
 		position: relative;
 		z-index: 1;
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 
 		#wrapper > .bg {
@@ -3619,11 +3619,11 @@ input, select, textarea {
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
-		overflow: hidden;
+		/* overflow: hidden; */
 		padding: 0 2rem 0 0;
-		position: relative;
+		position: sticky;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 72.05rem;
 		z-index: 2;
 	}
 
@@ -3723,6 +3723,7 @@ input, select, textarea {
 
 				#nav ul.links li.active {
 					background-color: #ffffff;
+					margin-left: 0.05rem;
 				}
 
 					#nav ul.links li.active a {
@@ -4749,4 +4750,13 @@ input, select, textarea {
 	letter-spacing: 0.075em;
 	text-transform: uppercase;
 	margin: 0 0 1rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  #nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+	background-color: #1f242b;
+  }
 }

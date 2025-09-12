@@ -10,7 +10,7 @@
 		@include vendor('transition', 'opacity #{_duration(menu)} ease');
 		position: relative;
 		z-index: 1;
-		overflow: hidden;
+		// overflow: hidden;
 
 		> .bg {
 			position: absolute;
