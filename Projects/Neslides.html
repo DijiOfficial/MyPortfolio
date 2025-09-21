@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Burgisser Dylan - NESlides</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/mainFooter.css">
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/png" href="../images/favicon.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">Home</a>
+					</header>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Featured Projects</a></li>
+							<li><a href="../aboutme.html">About Me</a></li>
+							<li><a href="../Projects.html">All Projects</a></li>
+							
+							<li class="active"><a rel="noopener noreferrer" target="_self" href="Neslides.html">NESlides</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/dylanburgisser/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a rel="noopener noreferrer" target="_blank" href="http://discordapp.com/users/236546764184879104" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								<h1>NESlides</h1>
+							</header>
+							
+                            <hr />
+							
+                            <div class="box">
+                                <h2>About NESlides</h2>
+							    
+                                <p><span class="image left"><img src="../images/neslides.gif" alt="" /></span> NESlides is a group project made entirely in Assembly. More specifically, 6502 Assembly, the language used for the 6502 microprocessor. This was the last microprocessor to be entirely designed by humans, and it's the one used in the NES.
+                                <br>The goal of this project was to create a simple game or application for the NES. While we developed it using emulators, it could still be tested on real NES hardware using special cartridges. Our original idea was to build a presentation tool, something like PowerPoint, but designed specifically for the NES.
+                                <br>Since this was my very first group project, it ended up being more complicated than I expected!</p>
+							</div>
+							
+                            <hr />
+							
+                            <header>
+								<section>
+								<h2>What I did</h2>
+								<div class="col-6 col-12-small">
+                                    <h3>The Beginning</h3>
+                                    <p>As this was my first team project and my first project in Assembly, I wasn't entirely sure what to expect. So we collectively decided to take things slow and avoid aiming too high. We settled on creating a slide presentation tool that could be easily expanded over time.</p>
+                                    <p>With tasks split up and the starting point decided, I chose the biggest challenge: <strong>“BIG TEXT”</strong>, because what good is a presentation tool without proper title text?</p>
+                                    <p>With limited ROM space, I set out to build an upscaler that could take any tile and turn it into 4 larger tiles. The challenge was that we only had 256 background tiles to work with. A single font with 26 letters, 10 digits, and a few symbols already eats up over 40 tiles. Wanting to support multiple fonts, images, and backgrounds, multiplying everything by 4 would eat up more than half the ROM and just for large text!</p>
+                                    <p>So, the <strong>Upscaler</strong> was born. The idea was to extract tile data, upscale it, and store it. Not in CHR-ROM (which can't be written to), but in <strong>CHR-RAM</strong>. RAM writable during VBLANKS (well anytime really but writing to it during display will cause issues!), which made it perfect for this case. After a good week of experimentation, I had made a working upscaled text!</p>
+
+
+                                    <h3>The Roadblock</h3>
+                                    <p>And then came the first major roadblock: <strong>team management</strong>. We had upscaled text, but no display, no slides, no actual application. Our team lacked leadership, and while I tried to keep the team motivated, it wasn't enough. Progress stalled, and most of the team was working on tasks that didn't contribute meaningfully to the core idea.</p>
+                                    <p>We eventually had a much-needed group discussion. The project wasn't going anywhere, and we all knew it. What was going wrong? How could we fix it? We agreed that the project lacked excitement. Unlike the other groups, we were making a tool, and it just wasn't fun.</p>
+                                    <p>So, we pivoted and introducing game-like elements to make the tool more engaging, both for us and potential users. While I harboured doubt that it would solve everything, it was at least a step forward. Sadly, progress stalled again not long after.</p>
+                                    <p>At that point, I decided things needed to change. The team wasn't moving, and I was the only one actively contributing. I had two options: let the project fail or take control and at least fail trying. I chose the latter. I wasn't going to stand by and watch it fall apart.</p>
+
+                                    <h3>The Wake-Up Call</h3>
+                                    <p>I quickly identified issues in our workflow and imposed a new structure on the team. It didn't make up for lost time, but it finally allowed us to function properly as a group. With time running short, I picked up the most important mechanics and pushed forward.</p>
+                                    <p>In the end, we managed to pull together a <strong>fully working project</strong>! It's a fraction of the potential we had to deliver but in turn teached me a very valuable lesson about working as a group! The best group is nothing without the right communication!</p>
+
+
+                                    <h2>My Contributions</h2>
+                                    <ul>
+                                        <li>Displaying text on screen from CHR-RAM</li>
+                                        <li>Reading and writing to/from CHR-RAM</li>
+                                        <li>Upscaling and displaying upscaled text</li>
+                                        <li>Support for "infinite" upscaling (upscaling already upscaled text)</li>
+                                        <li>Slide display system</li>
+                                        <li>Automatic slide formatting</li>
+                                        <li>Controller input handling</li>
+                                        <li>Menu system and blinking text</li>
+                                        <li>Slide navigation via controller</li>
+                                        <li>Sprite movement</li>
+                                        <li>Sprite collision with the world</li>
+                                        <li>Shooting mechanics</li>
+                                        <li>Bullet logic and background collision</li>
+                                        <li>Doors and slide switching with door interaction</li>
+                                        <li>Audio system and audio logic</li>
+                                    </ul>
+
+                                    <p>It was a rocky road, but we got there in the end. I learned a lot, both technically and in terms of teamwork. It was a fun challenge, and playing around in Assembly really gave me a deeper understanding and respect of how things were done back in the NES era.
+                                    <br>You can find the project files on GitHub below. To try it out, yo'll need an NES emulator.</p>
+								</div>
+                                <ul class="actions fit">
+								    <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/NESlides" class="button primary fit icon solid fa-search">Github Page</a></li>
+							    </ul>
+								</section>
+							</header>
+						</section>
+					</div>
+
+				<!-- New Footer -->
+				<div id="footer">
+					<div class="container">
+						<hr />
+						<div class="row">
+							<div class="col-12">
+								<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>Want to contact me or see more?</h3>
+									</header>
+									<p>See below how to reach me. And checkout other projects on my GitHub as well as my LinkedIn Profile</p>
+									<ul class="icons2">
+										<li><a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/dylanburgisser/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a rel="noopener noreferrer" target="_blank" href="http://discordapp.com/users/236546764184879104" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+										<li><a href="mailto:dylan.burgisser@hotmail.com" class="icon fa-solid fa-envelope"><span class="label">Send Email</span></a></li>
+									</ul>
+									<h3>Phone: 
+									<a href="tel:0479191913" class="white">(+32) 0479 19 19 13</a>
+									</h3>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Untitled</li><li>Original Design: <a rel="noopener noreferrer" target="_blank" href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
