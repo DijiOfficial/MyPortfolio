@@ -49,22 +49,22 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/GP1-DirectX-Rasterizer">DirectX 11 Rasterizer</h2>
+									<h2><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/GP1-DirectX-Rasterizer" class="project-modal-link">DirectX 11 Rasterizer</h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/GP1-DirectX-Rasterizer" class="image fit"><img src="../images/DirectX.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="https://github.com/DijiOfficial/GP1-DirectX-Rasterizer" class="image fit project-modal-link"><img src="../images/DirectX.PNG" alt="" /></a>
 								<p>Here we learned the basics of 3D rendering using DirectX 11. A simple yet effective introduction into the world of Graphics Programming.</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/GP1-DirectX-Rasterizer" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/GP1-DirectX-Rasterizer" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/VulkanGraphicsPipeline">Vulkan PBR Shader</a></h2>
+									<h2><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/VulkanGraphicsPipeline" class="project-modal-link">Vulkan PBR Shader</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/VulkanGraphicsPipeline" class="image fit"><img src="../images/GraphicsProgramming.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="https://github.com/DijiOfficial/VulkanGraphicsPipeline" class="image fit project-modal-link"><img src="../images/GraphicsProgramming.PNG" alt="" /></a>
 								<p>Following in the footsteps of DirectX 11 we then moved to learning Vulkan. Making a simple PBR shader from scratch using the Vulkan API.</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/VulkanGraphicsPipeline" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/VulkanGraphicsPipeline" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 						</section>
@@ -102,6 +102,19 @@
 				</div>
 			</div>
 
+			<!-- Iframe -->
+			<div id="projectModal" class="project-modal">
+				<div class="project-modal__backdrop" data-close-modal></div>
+
+				<div class="project-modal__panel">
+					<button class="project-modal__close" data-close-modal>&times;</button>
+
+					<div class="project-modal__content">
+						<iframe id="projectModalFrame"></iframe>
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
@@ -110,6 +123,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/iframe.js"></script>
 
 	</body>
 </html>

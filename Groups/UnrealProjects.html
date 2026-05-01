@@ -49,44 +49,44 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_self" href="../Projects/Brawlstorm.html">Brawlstorm</h2>
+									<h2><a rel="noopener noreferrer" class="project-modal-link" href="../Projects/Brawlstorm.html">Brawlstorm</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/Brawlstorm.html" class="image fit"><img src="../images/Brawlstorm.png" alt="image" /></a>
+								<a rel="noopener noreferrer" class="image fit project-modal-link" href="../Projects/Brawlstorm.html"><img src="../images/Brawlstorm.png" alt="image" /></a>
 								<p>Brawlstorm is my latest project made with Unreal Engine. A 2.5D Brawler style couch coop game!<br />
 									It is a project I worked on with 4 other students, made in blueprints and mostly C++</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="../Projects/Brawlstorm.html" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" class="button project-modal-link" href="../Projects/Brawlstorm.html">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>	
-									<h2><a rel="noopener noreferrer" target="_self" href="../Projects/Pawism.html">Pawism</a></h2>
+									<h2><a rel="noopener noreferrer" href="../Projects/Pawism.html" class="project-modal-link">Pawism</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/Pawism.html" class="image fit"><img src="../images/Pawism.png" alt="" /></a>
+								<a rel="noopener noreferrer" href="../Projects/Pawism.html" class="image fit project-modal-link"><img src="../images/Pawism.png" alt="" /></a>
 								<p>Made during a <b>game jam</b> with a <b>team of 7</b> in <b>2 days</b>, made with <b>Unreal Engine 5.5</b> we earned high praise for our <b>orignal</b> and <b>fun</b> idea.</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="../Projects/Pawism.html" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="../Projects/Pawism.html" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_self" href="../Projects/Mindguard.html">Mindguard</a></h2>
+									<h2><a rel="noopener noreferrer" href="../Projects/Mindguard.html" class="project-modal-link">Mindguard</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/Mindguard.html" class="image fit"><img src="../images/Mindguard.png" alt="image" /></a>
+								<a rel="noopener noreferrer" href="../Projects/Mindguard.html" class="image fit project-modal-link"><img src="../images/Mindguard.png" alt="image" /></a>
 								<p>Mindguard is a puzzle game demo. It's a simple prototype made in Unreal Engine.
 								</br>Entirely made in blueprints it serves as a concept idea for a puzzle game. I soon realized puzzle games where more difficult than I originally thought. However it taught me the basics of Unreal from which I could build many more games to come!</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="../Projects/Mindguard.html" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="../Projects/Mindguard.html" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_self" href="">Placeholder</a></h2>
+									<h2><a rel="noopener noreferrer" href="" class="project-modal-link">Placeholder</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="" class="image fit"><img src="../images/pic01.jpg" alt="image" /></a>
+								<a rel="noopener noreferrer" href="" class="image fit project-modal-link"><img src="../images/pic01.jpg" alt="image" /></a>
 								<p>This is a simple Placeholder for games to come</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 						</section>
@@ -124,6 +124,19 @@
 				</div>
 			</div>
 
+			<!-- Iframe -->
+			<div id="projectModal" class="project-modal">
+				<div class="project-modal__backdrop" data-close-modal></div>
+
+				<div class="project-modal__panel">
+					<button class="project-modal__close" data-close-modal>&times;</button>
+
+					<div class="project-modal__content">
+						<iframe id="projectModalFrame"></iframe>
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
@@ -132,6 +145,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/iframe.js"></script>
 
 	</body>
 </html>

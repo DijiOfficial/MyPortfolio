@@ -49,23 +49,23 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_self" href="../Projects/SFML.html">Custom SFML Engine</h2>
+									<h2><a rel="noopener noreferrer" href="../Projects/SFML.html" class="project-modal-link">Custom SFML Engine</h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/SFML.html" class="image fit"><img src="../images/SFML.PNG" alt="" /></a>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/SFML.html" class="image fit"><img src="../images/SFML2.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="../Projects/SFML.html" class="image fit project-modal-link"><img src="../images/SFML.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="../Projects/SFML.html" class="image fit project-modal-link"><img src="../images/SFML2.PNG" alt="" /></a>
 								<p><br/>Inspired by my orginal <b>2D game engine</b>, it was improved and modified to work with <b>SFML 3.0</b>. The culmination of my experience with Unreal Engine, Unity and C++ put in a summer project to prepare for my Erasmus in Ireland!</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="../Projects/SFML.html" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="../Projects/SFML.html" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_self" href="../Projects/Pacman.html">Pacman<br/>With a custom engine</h2>
+									<h2><a rel="noopener noreferrer" href="../Projects/Pacman.html" class="project-modal-link">Pacman<br/>With a custom engine</h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/Pacman.html" class="image fit"><img src="../images/pacman.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="../Projects/Pacman.html" class="image fit project-modal-link"><img src="../images/pacman.PNG" alt="" /></a>
 								<p>In this project I learned the fundamentals of Engine Programming and showcased the engine by making pacman with it!<br/>A close copy of the original it is made entirely from scratch in C++!</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="../Projects/Pacman.html" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="../Projects/Pacman.html" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 						</section>
@@ -103,6 +103,19 @@
 				</div>
 			</div>
 
+			<!-- Iframe -->
+			<div id="projectModal" class="project-modal">
+				<div class="project-modal__backdrop" data-close-modal></div>
+
+				<div class="project-modal__panel">
+					<button class="project-modal__close" data-close-modal>&times;</button>
+
+					<div class="project-modal__content">
+						<iframe id="projectModalFrame"></iframe>
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
@@ -111,6 +124,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/iframe.js"></script>
 
 	</body>
 </html>

@@ -49,42 +49,42 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_self" href="../Projects/Pacman.html">Pacman<br/>With a custom engine</h2>
+									<h2><a rel="noopener noreferrer" href="../Projects/Pacman.html" class="project-modal-link">Pacman<br/>With a custom engine</h2>
 								</header>
-								<a rel="noopener noreferrer" target="_self" href="../Projects/Pacman.html" class="image fit"><img src="../images/pacman.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="../Projects/Pacman.html" class="image fit project-modal-link"><img src="../images/pacman.PNG" alt="" /></a>
 								<p>In this project I learned the fundamentals of Engine Programming and showcased the engine by making pacman with it!<br/>A close copy of the original it is made entirely from scratch in C++!</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_self" href="../Projects/Pacman.html" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="../Projects/Pacman.html" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/Astyanax">Astyanax</a></h2>
+									<h2><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/Astyanax" class="project-modal-link">Astyanax</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/Astyanax" class="image fit"><img src="../images/astyanax.png" alt="" /></a>
+								<a rel="noopener noreferrer" href="https://github.com/DijiOfficial/Astyanax" class="image fit project-modal-link"><img src="../images/astyanax.png" alt="" /></a>
 								<p>An almost faithful recreation of the classic 1989 NES game Astyanax. <br/>Made in C++, some game design element slightly differ from the original.</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/Astyanax" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/Astyanax" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/MazeRunner">Maze Runner</a></h2>
+									<h2><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/MazeRunner" class="project-modal-link">Maze Runner</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/MazeRunner" class="image fit"><img src="../images/MazeRunnerMenu.png" alt="" /></a>
+								<a rel="noopener noreferrer" href="https://github.com/DijiOfficial/MazeRunner" class="image fit project-modal-link"><img src="../images/MazeRunnerMenu.png" alt="" /></a>
 								<p>Maze Runner is my very first project. With a basic understanding of C++ coding, me and my friend Raileanu Ioana made this maze game in a week. The code is of poor quality but it goes to show how far I've come!</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/MazeRunner" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="https://github.com/DijiOfficial/MazeRunner" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="">Placeholder</a></h2>
+									<h2><a rel="noopener noreferrer" href="" class="project-modal-link">Placeholder</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="" class="image fit"><img src="../images/pic08.jpg" alt="image" /></a>
+								<a rel="noopener noreferrer" href="" class="image fit project-modal-link"><img src="../images/pic08.jpg" alt="image" /></a>
 								<p>This is a simple Placeholder for games to come</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 						</section>
@@ -122,6 +122,19 @@
 				</div>
 			</div>
 
+			<!-- Iframe -->
+			<div id="projectModal" class="project-modal">
+				<div class="project-modal__backdrop" data-close-modal></div>
+
+				<div class="project-modal__panel">
+					<button class="project-modal__close" data-close-modal>&times;</button>
+
+					<div class="project-modal__content">
+						<iframe id="projectModalFrame"></iframe>
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
@@ -130,6 +143,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/iframe.js"></script>
 
 	</body>
 </html>

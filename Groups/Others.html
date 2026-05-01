@@ -49,24 +49,24 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="">Pacman<br/>With a custom engine</h2>
+									<h2><a rel="noopener noreferrer" href="" class="project-modal-link">Pacman<br/>With a custom engine</h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="" class="image fit"><img src="../images/pacman.PNG" alt="" /></a>
+								<a rel="noopener noreferrer" href="" class="image fit project-modal-link"><img src="../images/pacman.PNG" alt="" /></a>
 								<p>In this project I learned the fundamentals of Engine Programming and showcased the engine by making pacman with it!<br/>A close copy of the original it is made entirely from scratch in C++!</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a rel="noopener noreferrer" target="_blank" href="">Wave Function Collapse</a></h2>
+									<h2><a rel="noopener noreferrer" href="" class="project-modal-link">Wave Function Collapse</a></h2>
 								</header>
-								<a rel="noopener noreferrer" target="_blank" href="" class="image fit"><img src="../images/WFCDemo.gif" alt="" /></a>
-								<a rel="noopener noreferrer" target="_blank" href="" class="image fit"><img src="../images/WFCDemo2.gif" alt="" /></a>
+								<a rel="noopener noreferrer" href="" class="image fit project-modal-link"><img src="../images/WFCDemo.gif" alt="" /></a>
+								<a rel="noopener noreferrer" href="" class="image fit project-modal-link"><img src="../images/WFCDemo2.gif" alt="" /></a>
 								<p>The WaveFunctionCollapse project! Here you'll find my implementation of the popular Wave Function Collapse algorithm, designed for generating unique and seamless maps, dungeons, and worlds </br>I made a 2D version in C++ and a 3D one with Unity </br>
 								This is one of my favorite projects as I truly believe procedural generation is the future of gaming!</br>Imagine your favorite game but the world is new and different each time. Enticing right?</p>
 								<ul class="actions special">
-									<li><a rel="noopener noreferrer" target="_blank" href="" class="button">Read More</a></li>
+									<li><a rel="noopener noreferrer" href="" class="button project-modal-link">Read More</a></li>
 								</ul>
 							</article>
 						</section>
@@ -104,6 +104,19 @@
 				</div>
 			</div>
 
+			<!-- Iframe -->
+			<div id="projectModal" class="project-modal">
+				<div class="project-modal__backdrop" data-close-modal></div>
+
+				<div class="project-modal__panel">
+					<button class="project-modal__close" data-close-modal>&times;</button>
+
+					<div class="project-modal__content">
+						<iframe id="projectModalFrame"></iframe>
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
@@ -112,6 +125,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/iframe.js"></script>
 
 	</body>
 </html>
