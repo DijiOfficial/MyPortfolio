@@ -19,9 +19,11 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->
-					<header id="header">
+					<!-- <header id="header">
 						<a href="../index.html" class="logo">NESlides</a>
-					</header>
+					</header> -->
+					<br>
+					<br>
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
@@ -49,9 +51,9 @@
                             <hr /> -->
 							
                             <div class="box">
-                                <h2>About NESlides</h2>
+                                <!-- <h2>About NESlides</h2> -->
 							    
-                                <p><span class="image left"><img src="../images/neslides.gif" alt="" /></span> NESlides is a group project made entirely in Assembly. More specifically, 6502 Assembly, the language used for the 6502 microprocessor. This was the last microprocessor to be entirely designed by humans, and it's the one used in the NES.
+                                <p><span class="image left"><img src="../images/NESlides/neslides.gif" alt="" /></span> NESlides is a group project made entirely in Assembly. More specifically, 6502 Assembly, the language used for the 6502 microprocessor. This was the last microprocessor to be entirely designed by humans, and it's the one used in the NES.
                                 <br>The goal of this project was to create a simple game or application for the NES. While we developed it using emulators, it could still be tested on real NES hardware using special cartridges. Our original idea was to build a presentation tool, something like PowerPoint, but designed specifically for the NES.
                                 <br>Since this was my very first group project, it ended up being more complicated than I expected!</p>
 							</div>
@@ -115,24 +117,24 @@
 									<p>This project is one of the few projects for which I don't have a readme, so instead I will cover technical details here.</p>
 									<p>Starting with the upscaler, let's take a look at my approach. First let's understand the information we get from a tile. Each tile is 8x8 pixels, each pixel can have up to 4 colors, represented with 2 bits (00, 01, 10, 11). This information will then sample the color from the current palette and tadah, colored tiles.<br>
 									So we have 64 pixels with 2 bits each, that is 128 bits or 16 bytes of information for each tile. Now, when you read the information of a tile, you read 1 byte at a time (8 bits), so you would expect when reading the first 8 bits to get the information for the first 4 pixels, right? Well, no. You actually get half of the information of the first 8 pixels. So what about the second 8 bits? The other half, right? Well, again no. Now you get the second row of pixels' first half of the information. It's not until you get around to the 9th byte that you get the second half of the info. (This took a while to figure out but I couldn't tell you why it's like that.)</p>
-									<p><span class="image left"><img src="../images/NESlidesUpscaler1.png" alt="" /></span>Anyways, now that we know that, let's get into how we duplicate all that information. We start by extracting 4 bits. From the 16 bytes we separate it into 2x8 bytes, then each byte into 2x4 bits, and for each 4 bits we duplicate it horizontally and vertically. So from 4 bits to 16, or in the bigger scope, from 1 tile to 4 tiles.</p>
+									<p><span class="image left"><img src="../images//Neslides/NESlidesUpscaler1.jpg" alt="" /></span>Anyways, now that we know that, let's get into how we duplicate all that information. We start by extracting 4 bits. From the 16 bytes we separate it into 2x8 bytes, then each byte into 2x4 bits, and for each 4 bits we duplicate it horizontally and vertically. So from 4 bits to 16, or in the bigger scope, from 1 tile to 4 tiles.</p>
 									<p>Now for the astute you may be wondering: what about the other half? Indeed, I duplicate both halves and now end up with 8 tiles? Well, when I write the information back to the CHR-RAM, just like when you read it, it expects the first half (8 bytes) and then stacks on top the second half (8 bytes) to make a complete tile. So I needed to buffer 64 bytes of information! And simply write to the PPU in the correct order. For that I used a loop with some maths, which is why I map them like 1-3-2-4 instead, it makes the mapping easier to keep track of.</p>
-									<img src="../images/NESlidesUpscaler3.png" alt="" />
-									<p><span class="image right"><img src="../images/NESlidesUpscaler2.png" alt="" /></span>And once all the information is written to the PPU Voila, you have an upscaled tile! Now this method is very practical because it saves on a lot of manual work and, with some clever mapping, it's quite easy to use anywhere. Its only issue is it has no optimisation, not only for single tiles but for multi-tiles too. So in the case of the letter A, you will notice that I have 4 tiles where only 2 could have been used! This is one optimisation I caught early on but never got around to because of the other work that needed to be done!</p>
+									<img src="../images//Neslides/NESlidesUpscaler3.jpg" alt="" />
+									<p><span class="image right"><img src="../images/Neslides/NESlidesUpscaler2.jpg" alt="" /></span>And once all the information is written to the PPU Voila, you have an upscaled tile! Now this method is very practical because it saves on a lot of manual work and, with some clever mapping, it's quite easy to use anywhere. Its only issue is it has no optimisation, not only for single tiles but for multi-tiles too. So in the case of the letter A, you will notice that I have 4 tiles where only 2 could have been used! This is one optimisation I caught early on but never got around to because of the other work that needed to be done!</p>
 
                                     <br><br>
                                     <h3>Moving the Player</h3>
                                     <p>If you're still here, you must find this interesting! So here's some more cool stuff!</p>
                                     <p>Our player, just like Mario, is made of 4 sprites (technically 5 with the cigar being its own sprite).</p>
-                                    <img src="../images/NESlidesSprite.png" alt="" />
+                                    <img src="../images//Neslides/NESlidesSprite.jpg" alt="" />
 
                                     <p>So, how do we move and display all those correctly? Well... there's no magic trick, we need to keep track of each sprite and update them accordingly. But that doesn't mean we can't be clever about it!</p>
                                     <p>In the images below, you'll notice we use named "variables" (with `@`) to manage sprite data more easily. The `@` symbol lets us assign visual names to values. These aren't real variables and have very defined scopes, but when compiled, the `@` is replaced with actual value defined.</p>
                                     <p>We then define two global variables (and yes everything is global in Assembly!) to keep track of the player's position. When the player moves, we simply update these variables, and all the sprites accordingly! And voila, simple and clear player movement.</p>
                                     <p>It's a neat trick that keeps things simple while allowing us to expand on player movement however we want!</p>
 
-                                    <img src="../images/SpriteMovement1.png" alt="" />
-                                    <img src="../images/SpriteMovement2.png" alt="" />
+                                    <img src="../images//Neslides/SpriteMovement1.jpg" alt="" />
+                                    <img src="../images//Neslides/SpriteMovement2.jpg" alt="" />
                                     <br><br><br>
 
                                     <h3>Bullets, Collision & Controls</h3>
