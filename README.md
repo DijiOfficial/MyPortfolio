@@ -1,1 +1,1 @@
-# [Dylan Burgisser's Portfolio](https://dijiofficial.github.io/MyPortfolio/index.html)
+# [Dylan Burgisser's Portfolio](https://dijiofficial.github.io/Dylan-Burgisser-s-Portfolio/)
