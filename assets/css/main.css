@@ -4957,3 +4957,29 @@ body.modal-open {
 .hover-video:hover .hover-video-content {
     opacity: 1;
 }
+
+.recommendation {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid #4ea3ff;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    font-style: italic;
+}
+
+.recommendation p {
+    margin: 0 0 .75rem;
+}
+
+.recommendation cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.recommendation cite a {
+    margin-left: .5rem;
+    font-weight: 400;
+    font-size: .9em;
+}
