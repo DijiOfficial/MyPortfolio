@@ -4983,3 +4983,125 @@ body.modal-open {
     font-weight: 400;
     font-size: .9em;
 }
+
+.hover-video {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-tags {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    z-index: 5;
+
+    transform: translateX(110%);
+    opacity: 0;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+
+.hover-video:hover .project-tags {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.project-tags span {
+    padding: .45rem .8rem;
+
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(6px);
+
+    color: #fff;
+
+    border: none;
+    border-radius: 0;
+
+    font-size: .75rem;
+    font-weight: 600;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+
+    transform: translateX(20px);
+    opacity: 0;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease,
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.hover-video:hover .project-tags span {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.project-tags span:hover {
+    background: rgba(0, 0, 0, .85);
+    color: #18bfef;
+}
+
+.project-tags span {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-tags span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+
+    background: #18bfef;
+
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.project-tags span:hover::before {
+    opacity: 1;
+}
+
+/* Default (large cards) */
+.project-tags span {
+    padding: .45rem .8rem;
+    font-size: .75rem;
+}
+
+/* Smaller cards */
+.hover-video--small .project-tags {
+    top: .75rem;
+    right: .75rem;
+    gap: .3rem;
+}
+
+.hover-video--small .project-tags span {
+    padding: .2rem .5rem;
+    font-size: .45rem;
+}
+
+/* Delays */
+.project-tags span:nth-child(1) { transition-delay: .05s; }
+.project-tags span:nth-child(2) { transition-delay: .10s; }
+.project-tags span:nth-child(3) { transition-delay: .15s; }
+.project-tags span:nth-child(4) { transition-delay: .20s; }
+.project-tags span:nth-child(5) { transition-delay: .25s; }
