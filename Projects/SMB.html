@@ -52,34 +52,50 @@
 							<hr />
 							<h2>About the Engine & Pacman</h2> -->
 							<div class="box">
-								<p>Still a Work In Progress. Check out my <a rel="noopener noreferrer" target="_blank" href="https://github.com/DijiOfficial/SimplePlatformer" >GitHub Page</a> for more information.</p>
+								<p>
+									Nameless Engine is the third chapter in my journey to learn game engine development. With each engine I've built, I've pushed myself further, experimenting with engine architecture, design patterns and reusable gameplay systems.
+									<br><br>
+									This time, I wanted to tackle one of the biggest challenges in game development: physics. Sure, I could have used an existing physics library, but where's the fun in that? Instead, I built my own physics engine from the ground up. And what better way to put it to the test than by recreating the movement and feel of Super Mario Bros.?
+									<br><br>
+									Super Mario Bros. was built entirely from scratch using my custom C++ game engine. However, this project was never meant to be just a clone. It became a playground for testing and improving the engine's capabilities.
+									<br><br>
+									The engine now includes systems for rendering, input handling, collision detection, scene management, resource loading, component management, and much more. But the heart of the project is the custom physics engine, making Nameless Engine my most ambitious and technically challenging project so far.
+								</p>
 							</div>
 							<hr />
 							<header>
 								<section>
-									<h2>My Implementation</h2>
+									<h2>Engine Architecture</h2>
 									<div class="col-6 col-12-small">
-									<p>WIP</p>
-										<p><span class="image left"><img src="../images/Pipeline.png" alt="" /></span>
-										<h3>Some Core Features</h3>
-										<ul>
-											<li><strong>Component System:</strong> Modular components allow reusable gameplay logic and rapid iteration.</li>
-											<li><strong>Graphics & Rendering:</strong> Built on SDL for cross-platform windowing and rendering, with GLM for math and transformations.</li>
-											<li><strong>Audio System:</strong> Integrated SDL_mixer support for music and sound effects. With service locator and multithreading.</li>
-											<li><strong>Input & Controls:</strong> Unified handling of keyboard and controller input through a flexible command pattern.</li>
-											<li><strong>Game Programming Patterns:</strong> Command - Observer - Singleton - Component - Dirty Flag - Event Queue - Service Locator - Parent-Child GameObject relationships</li>
-										</ul>
-										<p>As for Pac-Man, I made a complete playable example showcasing the engine's capabilities, including AI, level creation, and multiple modes (Single Player, CO-OP, Versus Freemode, Versus Ghost Rules).</p>
+										<p>
+											The main focus of Nameless Engine was the physics system. To support this, the fixed update loop received a major upgrade, allowing the engine to handle physics calculations in a more reliable and consistent way.
 										</p>
 
-										<p>This project introduced me to engine development and advanced C++ programming. If what you read so far peaked your interest I invite you to read the GitHub page of the project.</p>
+										<p>
+											<span class="image left"><img src="../images/SMB/engine.png" alt="" /></span>
+										</p>
 
+										<h3>Some Core Features</h3>
+										<ul>
+											<li><strong>Physics World Integration:</strong> The physics engine runs inside its own isolated physics world, making it modular and easy to integrate into other engines or projects.</li>
+											<li><strong>Collision Optimization:</strong> Implemented broad and narrow-phase collision detection, spatial partitioning, optimized collision algorithms, multithreading, and other techniques to improve performance.</li>
+											<li><strong>Collision Dispatcher:</strong> Automatically detects collisions and dispatches events to the relevant objects, keeping gameplay systems clean and flexible.</li>
+										</ul>
+
+										<p>
+											Building Nameless Engine taught me far more than just how to write a game. It gave me hands-on experience with C++, software architecture, design patterns and the fundamental systems that power modern game engines.
+											<br><br>
+											Instead of only learning how to use an engine, I learned how engines are built. Understanding systems like rendering, physics, input, object management, ECS etc.. allows me to approach any engine, whether it's Unity, Unreal Engine, Godot, or a custom in-house engine. 
+											<br><br>
+											With a deeper understanding of what is happening behind the scenes. My knowledge can easily be transferred to any engine, making me a more versatile and effective gameplay programmer.
+										</p>
+
+										<p>My engine as a lot more to offer than what I could reasonably present in here. So feel free to explore the code on GitHub!</p>
 									</div>
 								</section>
 
 								<h2>Want to play the game?</h2>
-									<p>WIP</p>  
-                                    <p>WIP</p>
+                                    <p>Coming Soon to Web</p>
 
                                 
     <!-- <div class="spinner" id="spinner"></div>
